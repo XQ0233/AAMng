@@ -1,0 +1,2 @@
+# AAMng
+Academic Affairs Management
