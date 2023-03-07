@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>教务信息系统</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+    <h1 class="text-center mt-2 mb-2">
+      {{company_name}} Careers
+    </h1>
+    <!--img id="banner" alt="temp picture" scr="../static/banner.jpg" -->
+    <h2 class="text-center">关于此网站</h2>
+    <p>
+      近日，我校共有140门课程被认定为2022年省级一流本科课程，其中线上一流课程11门，线下一流课程35门，线上线下混合式一流课程89门，虚拟仿真实验教学一流课程1门，社会实践一流课程4门。截至目前，我校已有231门课程获批省级一流本科课程，获批数量位列省属高校第三。
+    </p>
+    <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+    <div>
+      {% for job in jobs %}
+      {% include 'jobitem.html' %}
+      {% endfor %}
+    </div>
+      <div style="text-align:center">
+    <button type="button" class="btn btn-primary btn-lg">联系管理员</button>
+        <p>Copyright QHD</p>
+      </div>
+    </div>
+  </body>
+</html>
