@@ -5,17 +5,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+      #banner{
+        height: 360px;
+        width: 100%;
+        object-fit:cover;
+        margin-bottom: 16px;
+      }
+    </style>
   </head>
   <body>
+    {% include 'header.html' %}
+    <img src="/static/banner.png" class="img-fluid" id="banner">
     <div class="container">
     <h1 class="text-center mt-2 mb-2">
       {{company_name}} Careers
     </h1>
-    <!--img id="banner" alt="temp picture" scr="../static/banner.jpg" -->
     <h2 class="text-center">关于此网站</h2>
+      <div class="row" style="margin-bottom:16px">
+        <div class="col-md-6">
     <p>
-      近日，我校共有140门课程被认定为2022年省级一流本科课程，其中线上一流课程11门，线下一流课程35门，线上线下混合式一流课程89门，虚拟仿真实验教学一流课程1门，社会实践一流课程4门。截至目前，我校已有231门课程获批省级一流本科课程，获批数量位列省属高校第三。
+      课程是人才培养的核心要素，课程质量直接决定人才培养质量。学校始终高度重视课程建设工作，持续深化教育教学改革，加大力度扶持课程建设成果，引导教师树立课程建设新理念，推进课程改革创新，强化现代信息技术与教学深度融合，以培育建设“目标精准、内容前沿、设计灵活”的一流课程。
+      下一步，我校将全面落实国家教育数字化战略部署，加快一流本科课程数字化建设与应用，打造高质量的国家级一流本科课程。学校也将坚持“以本为本”，持续加强课程思政建设，加强课程建设与学科、专业建设联动，立足社会经济发展需求和人才培养目标，围绕一流课程标准，创新教学方法，不断孵化精品好课，激发学生学习动力和专业志趣，培养适应新时代要求的应用型复合人才。
     </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+        <img src="/static/child.png" style="height:320px; border-radius:10px;">
+        </div>
+      </div>
     <h2 class="text-center mt-2 mb-4">Open Positions</h2>
     <div>
       {% for job in jobs %}
@@ -27,5 +44,6 @@
         <p>Copyright QHD</p>
       </div>
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
